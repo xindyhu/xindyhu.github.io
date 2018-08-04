@@ -42,10 +42,13 @@
                             <a href="#section5">Water Map</a>
                         </li>
                         <li>
-                            <a href="#section6">Your Action</a>
+                            <a href="#section6">Predictive Map</a>
                         </li>
                         <li>
-                            <a href="#section7">About Us</a>
+                            <a href="#section7">Your Action</a>
+                        </li>
+                        <li>
+                            <a href="#section8">About Us</a>
                         </li>
                     </ul>
                 </nav>
@@ -275,7 +278,6 @@
                                     </div>
                                     <div class="row">
                                         <div id="barchart"></div>
-
                                     </div>
                                 </div>
                             </div>
@@ -360,8 +362,44 @@
 
                 </div>
 
-                <!--what can you do?-->
+                <!-- prediction -->
                 <div class="row" id="section6">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title2 shadow greenbackground"><span>Predict the risks of drinking water contamination?</span>
+                        </div>
+
+                    <div class="row greenbluebackground">
+                        <!-- Headline -->
+                        <!--<div style="padding: 60px 100px 40px 0 !important;"></div>-->
+                        <h2 class="CM_desc"> Under reporting is generally an issue for drinking water quality. This problem is particularly serious for private well users.
+                            Using geohydrological knowledge and existing monitoring database, we can predict the risk of drinking water contamination using a random forest model.
+                            This will guide future sampling efforts. Click on the "observed" and "predicted" layer to see model performance.</h2>
+                        <form class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="pred-model" value="observed" checked="checked"> Observed Arsenic Concentration
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="pred-model" value="predicted"> Predicted Arsenic Concentration
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                        <div class="row greenbluebackground">
+
+                            <div id="predmap"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--what can you do?-->
+                <div class="row" id="section7">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="row">
                             <div class="title2 greenbackground shadow"><span>What can you do to help?</span></div>
@@ -382,7 +420,7 @@
                                         Here is a list of labs certified by the Environmental Protection Agency.
                                     </div>
                                     <div class="panel-footer greenbackground">
-                                        <a href="https://batchgeo.com/map/df7ff04da40da324ed2220e17063bf66" target="_blank" class="btn btn-success btn-block greenbluebackground">Send tap water for lab testing</a>
+                                        <a href="https://www.epa.gov/waterlabnetwork" target="_blank" class="btn btn-success btn-block greenbluebackground">Send tap water for lab testing</a>
                                     </div>
                                 </div>
                             </div>
@@ -432,7 +470,7 @@
                 </div>
 
                 <!-- ABOUT US -->
-                <div class="row" id="section7">
+                <div class="row" id="section8">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="row">
                             <div class="title2 greenbackground shadow"><span>Who We Are</span></div>
@@ -500,7 +538,7 @@
 
 
 
-                        <!-- Load JS libraries: jQuery, bootstrap, D3 -->
+    <!-- Load JS libraries: jQuery, bootstrap, D3 -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/d3.js"></script>
@@ -531,6 +569,9 @@
 
 	<!-- Timeline implementation -->
 	<script src="js/timeline.js"></script>
+
+    <!-- Predictive map implementation -->
+    <script src="js/predmap.js"></script>
 
 </body>
 </html>
