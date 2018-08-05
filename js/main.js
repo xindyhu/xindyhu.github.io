@@ -259,7 +259,7 @@ function roundTo(n, digits) {
 
 // Load CSV file
 function loadMapData() {
-    d3.csv("data/cleandata.csv", function (csv) {
+    d3.csv("data/cleanData.csv", function (csv) {
         //convert string to numeric
         csv.forEach(function (d) {
             d.COUNTY = +d.COUNTY;
